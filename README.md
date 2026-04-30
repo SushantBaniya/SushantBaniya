@@ -1,4 +1,4 @@
-https://streak-stats.demolab.com?user=SushantBaniya&theme=tokyonight&hide_border=true&date_format=M%20j%5B%2C%20Y%5D&timezone=Asia/Kathmandu
+[![Sushant Baniya GitHub stats](https://github-readme-stats.vercel.app/api?username=SushantBaniya)](https://github.com/SushantBaniya/github-readme-stats)
 
 ---
 
