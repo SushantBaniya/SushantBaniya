@@ -69,11 +69,31 @@ new_stats = f"""
 """
 
 import re
+
+new_stats = f"""
+## 📊 GitHub Stats
+
+<!-- STATS_START -->
+- Current Streak: {current_streak}
+- Longest Streak: {longest_streak}
+- Total Contributions: {calendar["totalContributions"]}
+<!-- STATS_END -->
+"""
+
 updated = re.sub(
-    r"## 📊 GitHub Stats[\s\S]*",
-    new_stats,
+    r"<!-- STATS_START -->[\s\S]*<!-- STATS_END -->",
+    f"""<!-- STATS_START -->
+- Current Streak: {current_streak}
+- Longest Streak: {longest_streak}
+- Total Contributions: {calendar["totalContributions"]}
+<!-- STATS_END -->""",
     content
 )
+
+if content == updated:
+    print("No changes detected in README")
+else:
+    print("README updated")
 
 with open("README.md", "w") as f:
     f.write(updated)
