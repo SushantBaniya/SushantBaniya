@@ -5,6 +5,8 @@ from datetime import datetime
 
 USERNAME = "SushantBaniya"
 TOKEN = os.getenv("GITHUB_TOKEN")  # Set GitHub token as an environment variable for security
+print("token exists", TOKEN is not None)
+
 
 url = "https://api.github.com/graphql"
 headers = {"Authorization": f"bearer {TOKEN}"}
