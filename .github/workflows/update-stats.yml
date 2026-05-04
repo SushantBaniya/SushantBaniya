@@ -2,7 +2,7 @@ name: Update GitHub Stats
 
 permissions:
   contents: write
-  
+
 on:
   schedule:
     - cron: "0 0 * * *"  # runs daily at midnight UTC
@@ -36,3 +36,5 @@ jobs:
         run: python contributions.py
         env:
           HELLO: ${{ secrets.HELLO }}
+
+      - uses: stefanzweifel/git-auto-commit-action@v5
