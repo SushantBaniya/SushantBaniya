@@ -31,3 +31,8 @@ jobs:
           git add README.md
           git commit -m "Update GitHub stats" || echo "No changes"
           git push
+
+      - name: Run script
+        run: python contributions.py
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
