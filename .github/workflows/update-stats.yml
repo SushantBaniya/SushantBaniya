@@ -35,4 +35,4 @@ jobs:
       - name: Run script
         run: python contributions.py
         env:
-          GITHUB_TOKEN: ${{ secrets.HELLO }}
+          HELLO: ${{ secrets.HELLO }}
