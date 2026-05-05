@@ -60,23 +60,26 @@ print("Longest streak:", longest_streak)
 with open("README.md", "r") as f:
     content = f.read()
 
-new_stats = f"""
-## 📊 GitHub Stats
-
-- Current Streak: {current_streak}
-- Longest Streak: {longest_streak}
-- Total Contributions: {calendar["totalContributions"]}
-"""
 
 import re
+
+pct = min(100, round((current_streak / longest_streak) * 100)) if longest_streak else 0
+bar_filled = round(pct / 5)   # 20-char bar
+bar_empty  = 20 - bar_filled
+
+streak_bar = "█" * bar_filled + "░" * bar_empty
 
 new_stats = f"""
 ## 📊 GitHub Stats
 
 <!-- STATS_START -->
-- Current Streak: {current_streak}
-- Longest Streak: {longest_streak}
-- Total Contributions: {calendar["totalContributions"]}
+| | |
+|---|---|
+| 🔥 Current streak | **{current_streak} days** |
+| 🏆 Longest streak | **{longest_streak} days** |
+| 📈 Total contributions | **{calendar["totalContributions"]}** |
+
+`{streak_bar}` {pct}% of best streak
 <!-- STATS_END -->
 """
 
