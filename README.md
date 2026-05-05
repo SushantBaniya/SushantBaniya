@@ -1,7 +1,11 @@
 ## 📊 GitHub Stats
 
 <!-- STATS_START -->
-- Current Streak: 3
-- Longest Streak: 19
-- Total Contributions: 334
+| | |
+|---|---|
+| 🔥 Current streak | **3 days** |
+| 🏆 Longest streak | **19 days** |
+| 📈 Total contributions | **337** |
+
+`███░░░░░░░░░░░░░░░░░` 16% of best streak
 <!-- STATS_END -->
